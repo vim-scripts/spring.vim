@@ -6,10 +6,15 @@
 "                 make the VIM bright with colors. Just like 
 "                 the flowers are in blossom in Spring.
 " Author:         CHE Wenlong <chewenlong AT buaa.edu.cn>
-" Version:        0.2
-" Last Change:    August 18, 2008
+" Version:        0.3
+" Last Change:    September 2, 2008
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+if !has("gui_running")
+    runtime! colors/default.vim
+    finish
+endif
 
 set background=light
 
@@ -35,9 +40,9 @@ hi Title            guifg=#202020   guibg=NONE      gui=bold
 hi Underlined       guifg=#202020   guibg=NONE      gui=underline
 
 " Split
-hi StatusLine       guifg=white     guibg=#c0c0c0   gui=NONE,bold
-hi StatusLineNC     guifg=white     guibg=#c0c0c0   gui=NONE
-hi VertSplit        guifg=#c0c0c0   guibg=#c0c0c0   gui=NONE
+hi StatusLine       guifg=black     guibg=grey      gui=NONE
+hi StatusLineNC     guifg=white     guibg=grey      gui=NONE
+hi VertSplit        guifg=grey      guibg=grey      gui=NONE
 
 " Folder
 hi Folded           guifg=#006699   guibg=#c0c0c0   gui=NONE
